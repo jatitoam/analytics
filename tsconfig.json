@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "listEmittedFiles": false,
-    "outDir": "build/lib/types",
+    "outDir": "dist/lib/types",
     "declaration": true, 
     "declarationMap": true,
     "module": "ESNext",
@@ -24,7 +24,7 @@
   ],
   "exclude": [
     "./node_modules/**/*",
-    "./build/**/*",
+    "./dist/**/*",
     "./src/analytics.js",
   ],
 }

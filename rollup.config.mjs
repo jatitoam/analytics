@@ -35,7 +35,7 @@ export default [
     external: ['react', 'react-dom'],
     output: [
       {
-        file: 'build/lib/bundles/bundle.esm.min.js',
+        file: 'dist/lib/bundles/bundle.esm.min.js',
         format: 'esm',
         plugins: [terser()],
         sourcemap: true,
@@ -48,7 +48,7 @@ export default [
     external: ['react', 'react-dom'],
     output: [
       {
-        file: 'build/lib/types/index.min.js',
+        file: 'dist/lib/types/index.min.js',
       },
     ],
     plugins: [
@@ -65,7 +65,7 @@ export default [
     input: 'src/analytics.js',
     output: [
       {
-        file: 'build/analytics.js',
+        file: 'dist/analytics.js',
         format: 'iife',
         name: 'AesirAnalytics',
       },

@@ -1,16 +1,16 @@
 {
-  "name": "aesirx_analytics",
-  "version": "1.0.0-alpha",
+  "name": "aesirx-analytics",
+  "version": "1.0.0-alpha.1",
   "license": "GPL-3.0-only",
   "author": "AesirX",
   "repository": "https://gitlab.redweb.dk/aesirx/analytics",
-  "main": "build/lib/cjs/index.js",
-  "module": "build/lib/esm/index.js",
+  "main": "dist/lib/cjs/index.js",
+  "module": "dist/lib/esm/index.js",
   "exports": {
-    "require": "./build/lib/cjs/index.js",
-    "import": "./build/lib/esm/index.js"
+    "require": "./dist/lib/cjs/index.js",
+    "import": "./dist/lib/esm/index.js"
   },
-  "types": "build/lib/types/index.d.ts",
+  "types": "dist/lib/types/index.d.ts",
   "source": "src/index.js",
   "dependencies": {
     "axios": "^0.21.0",
@@ -24,8 +24,8 @@
   },
   "scripts": {
     "clean": "rimraf lib",
-    "build:esm": "cross-env BABEL_ENV=esmUnbundled babel src --extensions '.js' --out-dir 'build/lib/esm' --source-maps",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions '.js' --out-dir 'build/lib/cjs' --source-maps",
+    "build:esm": "cross-env BABEL_ENV=esmUnbundled babel src --extensions '.js' --out-dir 'dist/lib/esm' --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions '.js' --out-dir 'dist/lib/cjs' --source-maps",
     "build:bundles": "cross-env BABEL_ENV=esmBundled rollup -c",
     "build": "npm-run-all -l clean -p build:esm build:cjs build:bundles",
     "lint": "eslint --fix \"src/**/\"",

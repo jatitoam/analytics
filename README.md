@@ -21,7 +21,7 @@ ENDPOINT_ANALYTICS_URL=https://example.com
 npm install
 npm run build
 ```
-##### copy built file `analytics/build/analytics.js` to your project
+##### copy built file `analytics/dist/analytics.js` to your project
 ##### Add script to `<head>`
 `<script async defer src="YOUR_PROJECT_PATH/analytics.js"></script>`
 
